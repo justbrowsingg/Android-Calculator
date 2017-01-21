@@ -11,4 +11,7 @@ The manditory functions are the +,-,x and / while the other ones are optional an
 show off your mad skills (e.g. trig functions, hex calculator, exp functions, etc.).
 
 #Your comments or assumptions
-- <add them here>
+- assuming there is a class called 'AnswerActivity' that retrieves and displays 
+  the numerical output 
+- assumes onClick() produces the numerical output of the function without 
+  pressing an equals '=' button 
