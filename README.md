@@ -18,4 +18,4 @@ show off your mad skills (e.g. trig functions, hex calculator, exp functions, et
 - assuming the input buttons can only be numbers. If this assumption is wrong
   and there are input buttons like '.' or 'sqrt' then I would add a try-catch to catch exception thrown by lines
   int firstInput = Integer.parseInt(editText1.getText().toString()); and/or 
-  int secondInput = Integer.parseInt(editText2.getText().toString()); 
+  int secondInput = Integer.parseInt(editText2.getText().toString()); for inputs that can't be properly converted to int
