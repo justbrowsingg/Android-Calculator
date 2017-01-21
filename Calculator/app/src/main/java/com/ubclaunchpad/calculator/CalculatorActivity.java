@@ -32,7 +32,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         int firstInput = Integer.parseInt(editText1.getText().toString()); 
         EditText editText2 = (EditText) findViewById(R.id.secondInput);
         int secondInput = Integer.parseInt(editText2.getText().toString()); 
-        double answer;
+        double answer;               // extra 1 might make a double
         intent.putExtra(TAG, answer);
         startActivity(intent);
         
