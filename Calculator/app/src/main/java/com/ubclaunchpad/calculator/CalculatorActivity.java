@@ -23,11 +23,19 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
      */
     @Override
     public void onClick(View v) {
+        
+        Intent intent = new Intent(this, AnswerActivity.class);
+        EditText editText1 = (EditText) findViewById(R.id.firstInput);
+        int firstInput = Integer.parseInt(editText1.getText().toString()); 
+        EditText editText2 = (EditText) findViewById(R.id.secondInput);
+        int firstInput = Integer.parseInt(editText2.getText().toString()); 
+        intent.putExtra(TAG, 
+        
         switch (v.getId())
-        {
+        {   
             case R.id.operation_add:
             {
-                //TODO add function
+                R.id.firstInput + R.id.secondInput 
                 break;
             }
             case R.id.operation_sub:
@@ -45,7 +53,11 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 //TODO divide function
                 break;
             }
-            //TODO any extra implmentations (optional)
+            case R.id.operation_extra1: 
+                {
+                    
+                    break;
+                }    
             default:
             {
                 Toast.makeText(this, "Click not implmented yet", Toast.LENGTH_LONG).show();
