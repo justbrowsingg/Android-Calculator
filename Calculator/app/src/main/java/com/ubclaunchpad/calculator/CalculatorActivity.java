@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+import android.widget.EditText;
+import android.content.Intent;
 
 public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener{
     private final static String TAG = CalculatorActivity.class.getSimpleName();
@@ -28,8 +30,10 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         EditText editText1 = (EditText) findViewById(R.id.firstInput);
         int firstInput = Integer.parseInt(editText1.getText().toString()); 
         EditText editText2 = (EditText) findViewById(R.id.secondInput);
-        int firstInput = Integer.parseInt(editText2.getText().toString()); 
-        intent.putExtra(TAG, 
+        int secondInput = Integer.parseInt(editText2.getText().toString()); 
+        intent.putExtra(TAG, firstInput);
+        intent.putExtra(TAG, secondInput);
+        startActivity(intent);
         
         switch (v.getId())
         {   
