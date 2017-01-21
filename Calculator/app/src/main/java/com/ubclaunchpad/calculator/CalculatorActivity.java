@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 import android.widget.EditText;
 import android.content.Intent;
+import Java.lang.Math.*;                       // for extra 1
 
 public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener{
     private final static String TAG = CalculatorActivity.class.getSimpleName();
@@ -26,40 +27,40 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         
-        Intent intent = new Intent(this, AnswerActivity.class);
+        Intent intent = new Intent(this, AnswerActivity.class);      
         EditText editText1 = (EditText) findViewById(R.id.firstInput);
         int firstInput = Integer.parseInt(editText1.getText().toString()); 
         EditText editText2 = (EditText) findViewById(R.id.secondInput);
         int secondInput = Integer.parseInt(editText2.getText().toString()); 
-        intent.putExtra(TAG, firstInput);
-        intent.putExtra(TAG, secondInput);
+        double answer;
+        intent.putExtra(TAG, answer);
         startActivity(intent);
         
         switch (v.getId())
         {   
             case R.id.operation_add:
             {
-                R.id.firstInput + R.id.secondInput 
+                answer = firstInput + secondInput;
                 break;
             }
             case R.id.operation_sub:
             {
-                //TODO subtract function
+                answer = firstInput - secondInput;
                 break;
             }
             case R.id.operation_multi:
             {
-                //TODO multiply function
+                answer = firstInput * secondInput;
                 break;
             }
             case R.id.operation_div:
             {
-                //TODO divide function
+                answer = firstInput / secondInput;
                 break;
             }
-            case R.id.operation_extra1: 
+            case R.id.operation_extra1:          // computes length of hypotenuse given the 2 other side-lengths of a right-angle triangle 
                 {
-                    
+                    answer = sqrt(pow(firstInput, 2) + pow(secondInput, 2))
                     break;
                 }    
             default:
